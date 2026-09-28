@@ -1,0 +1,14 @@
+.openai/
+.env
+.env.*
+node_modules/
+data/
+qa/
+*.sqlite
+*.sqlite-*
+*.db
+*.ppt
+*.pptx
+*.pdf
+*.zip
+*.tar.gz
