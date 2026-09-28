@@ -9,3 +9,59 @@
 .stack{align-content:start}
 @media(max-width:460px){.metrics:has(.metric strong:first-child){min-width:0}.content:has(.ledger-row) .metrics,.content:has(.budget) .metrics{grid-template-columns:1fr 1fr}.content:has(.budget) .metric:last-child{display:none}.metric .unit{display:block;margin:4px 0 0}.ledger-row .symbol{width:36px;height:36px}.ledger-row .amount{font-size:18px}.topbar .context{max-width:none}.topbar{gap:8px}.topbar>.row{width:100%;justify-content:space-between}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* Public demo: retain the existing palette and layout, enlarge reading targets. */
+:root{font-size:18px}
+body{overflow-wrap:anywhere}
+[hidden]{display:none!important}
+.btn,.btn.small,.chip,.text-btn,.role-switch button,.quick-prompts button{min-height:48px;font-size:18px}
+.icon-btn,.task-check{width:48px;height:48px;flex-shrink:0}
+.footnote,.notice,.page-heading p,.order-row p,.article p,.activity p,.settings-row p,.dialog-body p,.field,.task-time,.service-item .desc,.boundary,.service-item .service-meta,.ledger-row p,.empty p,.shortcut span.muted,.context{font-size:16px}
+.task-title,.shortcut strong,.order-row h3,.budget h3,.article h3{font-size:18px}
+.task-tag{white-space:normal}.task-list{padding:0}
+.badge,.detail-grid dt,.metric .label,.metric .unit,.price small,.data-table th,.data-table{font-size:16px}
+.field input,.field select,.field textarea{min-height:50px;font-size:18px}
+.form-actions{flex-wrap:wrap}
+.form-actions .btn{max-width:100%}
+.columns>*{min-width:0}
+.demo-disclosure{border-left:3px solid var(--gold);padding:12px 16px;margin-bottom:24px;background:#faf5e9}
+.demo-disclosure p{font-size:16px;margin-top:4px}
+.intro{padding:12px 0 20px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.site-footer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:22px;margin-top:36px;line-height:1.7}
+.recovery{max-width:760px;margin:50px auto;padding:24px;line-height:1.8}
+.home-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.home-actions .btn{flex:1 1 160px}
+.dialog-head{position:sticky;top:0;background:white;z-index:1}
+.content .metrics .metric{min-width:0}
+.large{font-size:22px}
+.large .btn,.large .field input,.large .field select,.large .field textarea,.large .task-title,.large .nav a{font-size:22px}
+.large .content p,.large .dialog-body p,.large .footnote,.large .field,.large .chip,.large .text-btn,.large .role-switch button,.large .badge,.large .data-table{font-size:20px}
+.large h1{font-size:30px}.large h2{font-size:24px}.large h3{font-size:22px}
+@media(max-width:1150px){.topbar{flex-wrap:wrap;height:auto;min-height:78px;padding-top:12px;padding-bottom:12px}}
+@media(max-width:820px){
+  .content{padding:22px 18px 40px}
+  .mobile-nav{padding-bottom:env(safe-area-inset-bottom);min-height:76px}
+  .mobile-nav a{min-width:0;min-height:62px;font-size:16px}
+  .shell{padding-bottom:calc(94px + env(safe-area-inset-bottom))}
+  .large .mobile-nav a{font-size:18px}
+  .topbar .row{gap:4px}
+  .role-switch button{padding:8px;white-space:normal}
+  .role-switch{flex:1}
+  .large .role-switch button{font-size:18px}
+  .between{flex-wrap:wrap}
+  .intro .btn{flex-shrink:0}
+  .service-grid{grid-template-columns:1fr}
+  .activity{flex-wrap:wrap}
+  .activity>div{flex:1;min-width:160px}
+  .activity .btn{margin-left:0}
+  .ledger-row{flex-wrap:wrap}
+  .ledger-row>div{flex:1;min-width:120px}
+  .content:has(.budget) .metric:last-child{display:flex}
+  .content:has(.budget) .metrics{grid-template-columns:1fr}
+  .content:has(.budget) .metric{padding:12px 0;border:0}
+  .dialog-body{padding:20px}
+  .form-grid,.detail-grid{grid-template-columns:1fr}
+  .date-display{display:none}
+  #toast{bottom:calc(96px + env(safe-area-inset-bottom))}
+}
+@media(max-width:460px){.metrics{grid-template-columns:1fr}.metric{padding:12px 0;border:0}.metric .unit{display:inline}.content:has(.ledger-row) .metrics{grid-template-columns:1fr}.form-actions .btn{flex:1 1 120px}}
